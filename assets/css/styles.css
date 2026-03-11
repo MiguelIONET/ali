@@ -1,0 +1,131 @@
+        :root {
+            /* Paleta de colores sugerida */
+            --azul-profundo: #0A2540; 
+            --azul-claro: #37aae9;    
+            --blanco: #FFFFFF;
+            --gris-claro: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--azul-profundo) 0%, #061727 100%);
+            color: var(--blanco);
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text-azul-claro {
+            color: var(--azul-claro) !important;
+        }
+
+        .asesoria {
+            background-color: var(--azul-claro) !important;
+            color: var(--blanco) !important;
+            font-weight: 600;
+            border: none;
+        }
+
+        .asesoria:hover {
+            background-color: #007BA3;
+            color: var(--blanco);
+        }
+        
+        .garantia-badge {
+            background-color: rgba(0, 153, 204, 0.15);
+            border-left: 4px solid var(--azul-claro);
+        }
+                .bg-azul-profundo { background-color: var(--azul-profundo); }
+        .text-azul-claro { color: var(--azul-claro); }
+        .text-azul-profundo { color: var(--azul-profundo); }
+
+        /* Header de la página */
+        .page-header {
+            background: linear-gradient(rgba(10, 37, 64, 0.9), rgba(10, 37, 64, 0.9)), url('ruta-a-tu-imagen-industrial.jpg') center/cover;
+            color: var(--blanco);
+            padding: 80px 0 60px;
+        }
+
+        /* Tarjetas de Valores */
+        .valor-card {
+            border: none;
+            background-color: var(--gris-claro);
+            transition: transform 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .valor-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--azul-claro);
+        }
+         /* Tarjetas de Soluciones */
+        .solucion-card {
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .solucion-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--azul-claro);
+        }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 153, 204, 0.1);
+            color: var(--azul-claro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+          .producto-card {
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-color: var(--azul-claro);
+        }
+        
+        .badge-garantia {
+            background-color: var(--azul-claro);
+            color: white;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+        }
+         .btn-primario {
+            background-color: var(--azul-claro);
+            color: var(--blanco);
+            font-weight: 600;
+            border: none;
+            padding: 12px 30px;
+        }
+
+        .btn-primario:hover {
+            background-color: #007BA3;
+            color: var(--blanco);
+        }
+
+        .contacto-info-card {
+            background-color: var(--azul-profundo);
+            color: white;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            height: 100%;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--azul-claro);
+            box-shadow: 0 0 0 0.25rem rgba(0, 153, 204, 0.25);
+        }
