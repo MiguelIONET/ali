@@ -15,39 +15,82 @@
 
     <mi-navbar></mi-navbar>
 
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 col-xl-6 text-center text-lg-start">
-                    
-                    <span class="badge bg-info text-white mb-3 px-3 py-2 border">
-                        Distribuidor autorizado   <img src="/assets/img/logos/bair_logo.png" alt="B-Air" class="img-fluid" style="height: 20px;">
-                    </span>
-                    
-                    <h1 class="display-4 fw-bold mb-4">
-                        Soluciones de climatización de <span class="text-azul-claro">alto rendimiento</span> 
-                    </h1>
-                    
-                    <p class="lead mb-4 opacity-75">
-                        Distribución de equipos de aire acondicionado para los sectores residencial, comercial e industrial.
-                    </p>
-                    
-                    <div class="garantia-badge p-3 mb-5 rounded d-inline-block">
-                        <strong class="text-azul-claro"><i class="bi bi-patch-check"></i>Exclusivo:</strong> Somos la única marca que ofrece garantía de por vida. 
+<section class="hero-section">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <div class="container py-5"> <div class="row align-items-center">
+                        <div class="col-lg-7 col-xl-6 text-center text-lg-start">
+                            <span class="badge bg-info text-white mb-3 px-3 py-2 border">
+                                Distribuidor autorizado   <img src="/assets/img/logos/bair_logo.png" alt="B-Air" class="img-fluid" style="height: 20px;">
+                            </span>
+                            <h1 class="display-4 fw-bold mb-4">
+                                Soluciones de climatización de <span class="text-azul-claro">alto rendimiento</span> 
+                            </h1>
+                            <p class="lead mb-4 opacity-75">
+                                Distribución de equipos de aire acondicionado para los sectores residencial, comercial e industrial.
+                            </p>
+                            <div class="garantia-badge p-3 mb-5 rounded d-inline-block">
+                                <strong class="text-azul-claro"><i class="bi bi-patch-check"></i>Exclusivo:</strong> Somos la única marca que ofrece garantía de por vida. 
+                            </div>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+                                <a href="#contacto" class="btn asesoria btn-lg px-4 gap-3">Solicitar Asesoría</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-6 d-none d-lg-block">
+                            <div class="bg-secondary rounded-4 " style="height: 300px; width: 100%;"><img src="/assets/img/index.webp" alt="Soluciones de climatización" class="img-fluid" style="border-radius: 15px;"> </div>
+                        </div>
                     </div>
-                    
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
-                        <a href="#contacto" class="btn asesoria btn-lg px-4 gap-3">Solicitar Asesoría</a>
-                        <a href="#soluciones" class="btn btn-outline-light btn-lg px-4">Ver Equipos</a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-5 col-xl-6 d-none d-lg-block">
-                    <div class="bg-secondary rounded-4 opacity-25" style="height: 400px; width: 100%;"></div>
                 </div>
             </div>
+
+            <div class="carousel-item">
+                <div class="container py-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 col-xl-6 text-center text-lg-start">
+                            <span class="badge bg-info text-white mb-3 px-3 py-2 border">
+                                Distribuidor autorizado   <img src="/assets/img/logos/bair_logo.png" alt="B-Air" class="img-fluid" style="height: 20px;">
+                            </span>
+                            <h1 class="display-4 fw-bold mb-4">
+                                Calidad respaldada para siempre <span class="text-azul-claro">distribuidores oficiales de B-Air</span> 
+                            </h1>
+                            <p class="lead mb-4 opacity-75">
+                                Te ofrecemos equipos de primer nivel con una promesa inigualable: garantía de por vida
+                            </p>
+                                                        <div class="garantia-badge p-3 mb-5 rounded d-inline-block">
+                                <strong class="text-azul-claro"><i class="bi bi-patch-check"></i>Exclusivo:</strong> Somos la única marca que ofrece garantía de por vida. 
+                            </div>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+                                <a href="/pages/productos.html" class="btn btn-outline-light btn-lg px-4">Ver Equipos</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-xl-6 d-none d-lg-block">
+                            <div class="bg-dark rounded-4 " style="height: 300px; width: 100%;"> <img src="/assets/img/Servicios.webp" alt="Tecnología Inverter" class="img-fluid" style="border-radius: 15px;"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+
+        <button class="carousel-control-prev   w-auto ps-3" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon button-c rounded-circle p-4" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next  w-auto pe-3" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon button-c p-4" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+
+    </div>
+</section>
 
     <section class="py-5 bg-light">
         <div class="container py-4">

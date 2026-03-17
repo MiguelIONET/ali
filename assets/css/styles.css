@@ -182,3 +182,69 @@
   background-color: #0d6efd; /* Color de fondo azul de Bootstrap, cámbialo a tu gusto */
   transform: rotateY(180deg);
 }
+
+/* Asegura que todos los items del carrusel tengan la misma altura */
+.carousel-item {
+    height: 100%;
+    min-height: 500px; /* Ajusta este valor según el contenido más largo que tengas */
+}
+
+/* Si quieres que ocupe gran parte de la pantalla (opcional) */
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+/* Evita que el row se salga del container cuando usas flex */
+.carousel-item .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 1. Establece una altura fija o mínima para el contenedor del carrusel */
+.hero-section .carousel-inner {
+    /* Puedes ajustar este valor (ej. 500px, 80vh) según el slide más alto que tengas */
+    min-height: 600px; 
+}
+
+/* 2. Haz que cada slide herede esa misma altura */
+.hero-section .carousel-item {
+    height: 100%;
+}
+
+/* 3. Centra el contenido verticalmente para que los slides con menos texto no queden pegados arriba */
+.hero-section .carousel-item .container {
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centra el row internamente */
+}
+.button-c{
+    background-color: var(--azul-claro);
+    border: none;
+    border-radius: 25px;
+    padding: 30px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+/* 1. Evita que el contenedor cambie de tamaño definiendo una altura mínima */
+.hero-section .carousel-inner {
+    min-height: 550px; /* Ajusta este valor al alto de tu diapositiva más grande */
+}
+
+/* 2. Hace que todas las diapositivas ocupen el 100% de esa altura fijada */
+.hero-section .carousel-item {
+    height: 100%;
+}
+
+/* 3. Centra verticalmente el contenido dentro de las diapositivas con menos texto */
+.hero-section .carousel-item .container {
+    height: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+/* 4. (Opcional) Asegura que los controles prev/next se mantengan centrados verticalmente en todo momento */
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+    align-items: center;
+}
