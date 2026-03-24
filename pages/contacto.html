@@ -74,51 +74,51 @@
                 <div class="col-lg-7">
                     <div class="bg-white p-5 rounded-4 border shadow-sm h-100">
                         <h3 class="fw-bold text-azul-profundo mb-4">Solicita una Cotización</h3>
-                        <form action="#" method="POST">
-                            <div class="row g-3">
-                                
-                                <div class="col-md-6">
-                                    <label for="nombre" class="form-label fw-semibold text-muted small">Nombre completo *</label>
-                                    <input type="text" class="form-control bg-light" id="nombre" required>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="empresa" class="form-label fw-semibold text-muted small">Empresa / Contratista</label>
-                                    <input type="text" class="form-control bg-light" id="empresa" placeholder="Opcional">
-                                </div>
+<form action="enviar.php" method="POST">
+    <div class="row g-3">
+        
+        <div class="col-md-6">
+            <label for="nombre" class="form-label fw-semibold text-muted small">Nombre completo *</label>
+            <input type="text" class="form-control bg-light" id="nombre" name="nombre" required>
+        </div>
+        
+        <div class="col-md-6">
+            <label for="empresa" class="form-label fw-semibold text-muted small">Empresa / Contratista</label>
+            <input type="text" class="form-control bg-light" id="empresa" name="empresa" placeholder="Opcional">
+        </div>
 
-                                <div class="col-md-6">
-                                    <label for="correo" class="form-label fw-semibold text-muted small">Correo electrónico *</label>
-                                    <input type="email" class="form-control bg-light" id="correo" required>
-                                </div>
+        <div class="col-md-6">
+            <label for="correo" class="form-label fw-semibold text-muted small">Correo electrónico *</label>
+            <input type="email" class="form-control bg-light" id="correo" name="correo" required>
+        </div>
 
-                                <div class="col-md-6">
-                                    <label for="telefono" class="form-label fw-semibold text-muted small">Teléfono *</label>
-                                    <input type="tel" class="form-control bg-light" id="telefono" required>
-                                </div>
+        <div class="col-md-6">
+            <label for="telefono" class="form-label fw-semibold text-muted small">Teléfono *</label>
+            <input type="tel" class="form-control bg-light" id="telefono" name="telefono" required>
+        </div>
 
-                                <div class="col-12">
-                                    <label for="tipoProyecto" class="form-label fw-semibold text-muted small">Tipo de Proyecto *</label>
-                                    <select class="form-select bg-light" id="tipoProyecto" required>
-                                        <option value="" selected disabled>Selecciona una opción...</option>
-                                        <option value="residencial">Residencial (Hogares / Proyectos habitacionales)</option>
-                                        <option value="comercial">Comercial (Negocios / Oficinas)</option>
-                                        <option value="industrial">Industrial / Constructora</option>
-                                        <option value="distribucion">Instalador / Contratista HVAC</option>
-                                    </select>
-                                </div>
+        <div class="col-12">
+            <label for="tipoProyecto" class="form-label fw-semibold text-muted small">Tipo de Proyecto *</label>
+            <select class="form-select bg-light" id="tipoProyecto" name="tipoProyecto" required>
+                <option value="" selected disabled>Selecciona una opción...</option>
+                <option value="residencial">Residencial (Hogares / Proyectos habitacionales)</option>
+                <option value="comercial">Comercial (Negocios / Oficinas)</option>
+                <option value="industrial">Industrial / Constructora</option>
+                <option value="distribucion">Instalador / Contratista HVAC</option>
+            </select>
+        </div>
 
-                                <div class="col-12">
-                                    <label for="mensaje" class="form-label fw-semibold text-muted small">Detalles del proyecto o equipo *</label>
-                                    <textarea class="form-control bg-light" id="mensaje" rows="4" required placeholder="Cuéntanos sobre las capacidades o requerimientos técnicos que buscas..."></textarea>
-                                </div>
+        <div class="col-12">
+            <label for="mensaje" class="form-label fw-semibold text-muted small">Detalles del proyecto o equipo *</label>
+            <textarea class="form-control bg-light" id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntanos sobre las capacidades o requerimientos técnicos que buscas..."></textarea>
+        </div>
 
-                                <div class="col-12 mt-4">
-                                    <button type="submit" class="btn btn-primario w-100">Enviar Mensaje</button>
-                                </div>
-                                
-                            </div>
-                        </form>
+        <div class="col-12 mt-4">
+            <button type="submit" class="btn btn-primario w-100 bg-azul-claro text-white" style="background-color: #007bff;">Enviar Mensaje</button>
+        </div>
+        
+    </div>
+</form>
                     </div>
                 </div>
 
