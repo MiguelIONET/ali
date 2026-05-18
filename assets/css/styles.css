@@ -1,250 +1,385 @@
-        :root {
-            /* Paleta de colores sugerida */
-            --azul-profundo: #0A2540; 
-            --azul-claro: #37aae9;    
-            --blanco: #FFFFFF;
-            --gris-claro: #f8f9fa;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--azul-profundo) 0%, #061727 100%);
-            color: var(--blanco);
-            padding: 120px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .text-azul-claro {
-            color: var(--azul-claro) !important;
-        }
-
-        .asesoria {
-            background-color: var(--azul-claro) !important;
-            color: var(--blanco) !important;
-            font-weight: 600;
-            border: none;
-        }
-
-        .asesoria:hover {
-            background-color: #007BA3;
-            color: var(--blanco);
-        }
-        
-        .garantia-badge {
-            background-color: rgba(0, 153, 204, 0.15);
-            border-left: 4px solid var(--azul-claro);
-        }
-        .bg-azul-profundo { background-color: var(--azul-profundo); }
-        .bg-azul-claro { background-color: var(--azul-claro); }
-        .text-azul-claro { color: var(--azul-claro); }
-        .text-azul-profundo { color: var(--azul-profundo); }
-
-        /* Header de la página */
-        .page-header {
-            background: linear-gradient(rgba(10, 37, 64, 0.9), rgba(10, 37, 64, 0.9)), url('ruta-a-tu-imagen-industrial.jpg') center/cover;
-            color: var(--blanco);
-            padding: 80px 0 60px;
-            margin-top: 40px;;
-        }
-        .valores-section {
-            background-color: var(--azul-claro);
-            margin-bottom: 0;
-        }
-        /* Tarjetas de Valores */
-        .valor-card {
-            border: none;
-            background-color: var(--gris-claro);
-            transition: transform 0.3s ease;
-            border-bottom: 3px solid transparent;
-        }
-
-        .valor-card:hover {
-            transform: translateY(-5px);
-            border-bottom: 3px solid var(--azul-profundo);
-        }
-         /* Tarjetas de Soluciones */
-        .solucion-card {
-            border: 1px solid #e0e0e0;
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .solucion-card:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-color: var(--azul-claro);
-        }
-
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            background-color: rgba(0, 153, 204, 0.1);
-            color: var(--azul-claro);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 12px;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-          .producto-card {
-            border: 1px solid #e0e0e0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .producto-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-color: var(--azul-claro);
-        }
-        
-        .badge-garantia {
-            background-color: var(--azul-claro);
-            color: white;
-            font-size: 0.9rem;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-        }
-         .btn-primario {
-            background-color: var(--azul-claro);
-            color: var(--blanco);
-            font-weight: 600;
-            border: none;
-            padding: 12px 30px;
-        }
-
-        .btn-primario:hover {
-            background-color: #007BA3;
-            color: var(--blanco);
-        }
-
-        .contacto-info-card {
-            background-color: var(--azul-profundo);
-            color: white;
-            border-radius: 1rem;
-            padding: 2.5rem;
-            height: 100%;
-        }
-
-        .form-control:focus, .form-select:focus {
-            border-color: var(--azul-claro);
-            box-shadow: 0 0 0 0.25rem rgba(0, 153, 204, 0.25);
-        }
-
-        /* Contenedor principal de la tarjeta */
-.flip-card {
-  background-color: transparent;
-  perspective: 1000px; /* Le da profundidad al efecto 3D */
-  cursor: pointer;
-  min-height: 120px; /* Asegura que la tarjeta no colapse si no hay suficiente contenido */
+:root {
+    --azul-profundo: #0A2540;
+    --azul-medio: #146A9F;
+    --azul-claro: #37aae9;
+    --verde-acento: #18A66A;
+    --blanco: #FFFFFF;
+    --gris-claro: #F4F8FB;
+    --gris-borde: #DDE8F0;
+    --texto: #172331;
+    --texto-suave: #5A6775;
+    --sombra-suave: 0 14px 36px rgba(10, 37, 64, 0.12);
+    --sombra-card: 0 18px 42px rgba(10, 37, 64, 0.14);
+    --radio-ui: 0.5rem;
 }
 
-/* El contenedor interno que realmente gira */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s ease-in-out;
-  transform-style: preserve-3d;
+html {
+    scroll-padding-top: 92px;
 }
 
-/* Esta es la clase mágica que se activa con el clic (onclick).
-  Gira la tarjeta 180 grados en el eje Y.
-*/
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
+body {
+    background: var(--gris-claro);
+    color: var(--texto);
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding-top: 76px;
+    text-rendering: optimizeLegibility;
 }
 
-/* Estilos compartidos por la parte frontal y trasera */
-.flip-card-front, 
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-  top: 0;
-  left: 0;
+img {
+    max-width: 100%;
 }
 
-/* Asegurar que la cara frontal se vea por defecto */
-.flip-card-front {
-  background-color: #f8f9fa; /* Color de fondo por defecto, modifícalo según tu clase .valor-card */
-  z-index: 2;
+a,
+.btn,
+.card,
+.producto-card,
+.solucion-card,
+.valor-card,
+.form-control,
+.form-select {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-/* Estilos iniciales de la cara trasera (ya viene girada) */
-.flip-card-back {
-  background-color: #0d6efd; /* Color de fondo azul de Bootstrap, cámbialo a tu gusto */
-  transform: rotateY(180deg);
+.rounded-4,
+.card.rounded-4 {
+    border-radius: var(--radio-ui) !important;
 }
 
-/* Asegura que todos los items del carrusel tengan la misma altura */
-.carousel-item {
+.bg-azul-profundo {
+    background-color: var(--azul-profundo) !important;
+}
+
+.bg-azul-claro {
+    background-color: var(--azul-claro) !important;
+}
+
+.bg-gris-claro {
+    background: var(--gris-claro) !important;
+}
+
+.text-azul-claro {
+    color: var(--azul-claro) !important;
+}
+
+.text-azul-profundo {
+    color: var(--azul-profundo) !important;
+}
+
+.btn {
+    border-radius: var(--radio-ui);
+}
+
+.asesoria,
+.btn-primario {
+    background: linear-gradient(135deg, var(--azul-claro), var(--azul-medio)) !important;
+    border: 0;
+    box-shadow: 0 12px 24px rgba(55, 170, 233, 0.28);
+    color: var(--blanco) !important;
+    font-weight: 700;
+    padding: 12px 30px;
+}
+
+.asesoria:hover,
+.btn-primario:hover {
+    background: linear-gradient(135deg, #2E9CD7, #0F5D8D) !important;
+    box-shadow: 0 16px 30px rgba(55, 170, 233, 0.34);
+    color: var(--blanco) !important;
+    transform: translateY(-2px);
+}
+
+.btn-outline-light:hover,
+.btn-outline-success:hover {
+    transform: translateY(-2px);
+}
+
+.hero-section {
+    background:
+        linear-gradient(120deg, rgba(10, 37, 64, 0.95) 0%, rgba(10, 37, 64, 0.82) 54%, rgba(20, 106, 159, 0.78) 100%),
+        url("/assets/img/banner/BannerGIALI.webp") center/cover;
+    color: var(--blanco);
+    overflow: hidden;
+    padding: clamp(36px, 5vw, 64px) 0;
+    position: relative;
+}
+
+.hero-section .carousel-inner {
+    min-height: clamp(390px, 52vh, 500px);
+}
+
+.hero-section .carousel-item {
     height: 100%;
-    min-height: 500px; /* Ajusta este valor según el contenido más largo que tengas */
 }
 
-/* Si quieres que ocupe gran parte de la pantalla (opcional) */
-.min-vh-75 {
-    min-height: 75vh;
-}
-
-/* Evita que el row se salga del container cuando usas flex */
-.carousel-item .container {
+.hero-section .carousel-item .container {
     display: flex;
-    flex-direction: column;
+    min-height: clamp(390px, 52vh, 500px);
+    align-items: center;
+}
+
+.hero-section h1,
+.page-header h1 {
+    letter-spacing: 0;
+}
+
+.hero-section .badge,
+.page-header .badge {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.13) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    color: var(--blanco) !important;
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.hero-section .col-lg-5.d-lg-block > div {
+    background: transparent !important;
+    border: 0;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    overflow: visible;
+    padding: 0;
 }
 
-/* 1. Establece una altura fija o mínima para el contenedor del carrusel */
-.hero-section .carousel-inner {
-    /* Puedes ajustar este valor (ej. 500px, 80vh) según el slide más alto que tengas */
-    min-height: 600px; 
+.hero-section .col-lg-5.d-lg-block img {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
 }
 
-/* 2. Haz que cada slide herede esa misma altura */
-.hero-section .carousel-item {
+.hero-section .asesoria,
+.hero-section .asesoria:hover {
+    box-shadow: none;
+}
+
+.garantia-badge {
+    background-color: rgba(55, 170, 233, 0.14);
+    border: 1px solid rgba(55, 170, 233, 0.25);
+    border-left: 4px solid var(--azul-claro);
+}
+
+.page-header {
+    background:
+        linear-gradient(120deg, rgba(10, 37, 64, 0.94), rgba(10, 37, 64, 0.82)),
+        url("../img/banner/BannerGIALI.webp") center/cover;
+    color: var(--blanco);
+    margin-top: 0;
+    overflow: hidden;
+    padding: clamp(72px, 8vw, 108px) 0 clamp(56px, 7vw, 88px);
+    position: relative;
+}
+
+.page-header .lead {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+section {
+    background-color: var(--blanco);
+}
+
+section.bg-light,
+section.bg-gris-claro {
+    background: var(--gris-claro) !important;
+}
+
+.valor-card,
+.solucion-card,
+.producto-card,
+.contacto-info-card,
+.bg-white.border,
+.p-4.bg-white.border {
+    border: 1px solid var(--gris-borde) !important;
+    box-shadow: 0 10px 30px rgba(10, 37, 64, 0.08);
+}
+
+.solucion-card,
+.producto-card,
+.valor-card {
+    background: var(--blanco);
     height: 100%;
 }
 
-/* 3. Centra el contenido verticalmente para que los slides con menos texto no queden pegados arriba */
-.hero-section .carousel-item .container {
-    height: 100%;
+.solucion-card:hover,
+.producto-card:hover,
+.valor-card:hover {
+    border-color: rgba(55, 170, 233, 0.55) !important;
+    box-shadow: var(--sombra-card);
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    align-items: center;
+    background-color: rgba(55, 170, 233, 0.12);
+    border: 1px solid rgba(55, 170, 233, 0.2);
+    border-radius: var(--radio-ui);
+    color: var(--azul-claro);
     display: flex;
-    align-items: center; /* Centra el row internamente */
+    font-size: 1.5rem;
+    height: 60px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    width: 60px;
 }
-.button-c{
-    background-color: var(--azul-claro);
-    border: none;
-    border-radius: 25px;
+
+.producto-card .bg-light {
+    background: linear-gradient(180deg, #FFFFFF, #EEF6FB) !important;
+}
+
+.producto-card img {
+    max-height: 190px;
+    object-fit: contain;
+}
+
+.precios-box .btn-outline-success {
+    background: #F1FBF6;
+    border-color: rgba(24, 166, 106, 0.45);
+    color: #0B7C4C;
+}
+
+.precios-box .btn-outline-success:hover,
+.precios-box .btn-outline-success:focus {
+    background: var(--verde-acento);
+    border-color: var(--verde-acento);
+    color: var(--blanco);
+}
+
+.precios-box .card-body {
+    border-radius: var(--radio-ui);
+}
+
+.badge-garantia {
+    background: linear-gradient(135deg, var(--azul-profundo), var(--azul-medio));
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 999px;
+    color: var(--blanco);
+    display: inline-flex;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+.contacto-info-card {
+    background:
+        linear-gradient(145deg, rgba(10, 37, 64, 0.98), rgba(20, 106, 159, 0.88));
+    border-radius: var(--radio-ui);
+    color: var(--blanco);
+    height: 100%;
+    padding: 2.5rem;
+}
+
+.form-control,
+.form-select {
+    border-color: var(--gris-borde);
+    border-radius: var(--radio-ui);
+    min-height: 48px;
+}
+
+.form-control.bg-light,
+.form-select.bg-light {
+    background-color: #F7FAFC !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--azul-claro);
+    box-shadow: 0 0 0 0.25rem rgba(55, 170, 233, 0.18);
+}
+
+.valores-section {
+    background:
+        linear-gradient(135deg, var(--azul-claro), #8FD7F4);
+    margin-bottom: 0;
+}
+
+.flip-card {
+    background-color: transparent;
+    cursor: pointer;
+    min-height: 136px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    width: 100%;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    backface-visibility: hidden;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: var(--blanco);
+    z-index: 2;
+}
+
+.flip-card-back {
+    background: var(--azul-profundo);
+    transform: rotateY(180deg);
+}
+
+.button-c {
+    background-color: rgba(55, 170, 233, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 999px;
+    color: var(--blanco);
     padding: 30px;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-/* 1. Evita que el contenedor cambie de tamaño definiendo una altura mínima */
-.hero-section .carousel-inner {
-    min-height: 550px; /* Ajusta este valor al alto de tu diapositiva más grande */
 }
 
-/* 2. Hace que todas las diapositivas ocupen el 100% de esa altura fijada */
-.hero-section .carousel-item {
-    height: 100%;
-}
-
-/* 3. Centra verticalmente el contenido dentro de las diapositivas con menos texto */
-.hero-section .carousel-item .container {
-    height: 100%;
-    display: flex;
-    align-items: center; 
-}
-
-/* 4. (Opcional) Asegura que los controles prev/next se mantengan centrados verticalmente en todo momento */
 .hero-section .carousel-control-prev,
 .hero-section .carousel-control-next {
     align-items: center;
+}
+
+footer a,
+.navbar a {
+    text-underline-offset: 0.2em;
+}
+
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .hero-section {
+        padding: 56px 0;
+    }
+
+    .hero-section .carousel-inner,
+    .hero-section .carousel-item .container {
+        min-height: auto;
+    }
+
+    .lead.w-75 {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .page-header,
+    .hero-section {
+        text-align: center;
+    }
+
+    .contacto-info-card,
+    .bg-white.p-5 {
+        padding: 1.5rem !important;
+    }
+
+    .button-c {
+        padding: 20px;
+    }
 }

@@ -1,16 +1,28 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-<Style>
+<style>
     :root {
-            /* Paleta de colores sugerida */
-            --azul-profundo: #0A2540; 
-            --azul-claro: #37aae9;    
-            --blanco: #FFFFFF;
+        --azul-profundo: #0A2540;
+        --azul-claro: #37aae9;
+        --blanco: #FFFFFF;
     }
+
     footer {
-        background-color: var(--azul-profundo);
+        background:
+          linear-gradient(135deg, rgba(10, 37, 64, 1), rgba(12, 52, 86, 1));
+        border-top: 4px solid var(--azul-claro);
         color: var(--blanco);
     }
-</Style>
+
+    footer a {
+        opacity: 0.82;
+        transition: opacity 0.2s ease, color 0.2s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+        color: var(--azul-claro) !important;
+        opacity: 1;
+    }
+</style>
 <footer class=" text-white pt-5 pb-4 ">
   <div class="container text-center text-md-start">
     <div class="row text-center text-md-start">
@@ -45,10 +57,10 @@
         </h5>
         
         <div id="socialFooter" class="collapse d-md-block">
-          <p><a href="https://www.facebook.com/profile.php?id=61580673626339" class="text-white text-decoration-none" target="_blank"><i class="bi bi-facebook"></i>&nbsp; Facebook</a></p>
-          <p><a href="https://www.instagram.com/grupo_industrial_ali/" class="text-white text-decoration-none" target="_blank"><i class="bi bi-instagram"></i>&nbsp; Instagram</a></p>
-          <p><a href="#" class="text-white text-decoration-none" target="_blank"><i class="bi bi-tiktok"></i>&nbsp; TikTok</a></p>
-          <p><a href="#" class="text-white text-decoration-none" target="_blank"><i class="bi bi-youtube"></i>&nbsp; YouTube</a></p>
+          <p><a href="https://www.facebook.com/profile.php?id=61580673626339" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i>&nbsp; Facebook</a></p>
+          <p><a href="https://www.instagram.com/grupo_industrial_ali/" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i>&nbsp; Instagram</a></p>
+          <p><a href="#" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="bi bi-tiktok"></i>&nbsp; TikTok</a></p>
+          <p><a href="#" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer"><i class="bi bi-youtube"></i>&nbsp; YouTube</a></p>
         </div>
       </div>
 
